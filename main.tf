@@ -45,7 +45,7 @@ resource "aws_subnet" "ce10_sankari_publicSubnet1" {
 # Associate Public Subnet with Route Table
 resource "aws_route_table_association" "ce10-publicRT" {
   subnet_id      = aws_subnet.ce10_sankari_publicSubnet1.id
-  route_table_id = aws_route_table.ce10-publicRT.id
+  route_table_id = aws_route_table.ce10-sankari-public.id
 }
 
 # Security Group (Allow SSH)
